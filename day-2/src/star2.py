@@ -19,7 +19,15 @@ def load_program():
 
 program = load_program()
 
-executor = IntcodeComputer(program, 12, 2)
-terminated_program = executor.execute()
+# Bruteforce the noun verb combination
+noun = 0
+verb = 0
 
-print(terminated_program)
+for noun in range(0, 99):
+    for verb in range(0, 99):
+        executor = IntcodeComputer(program.copy(), noun, verb)
+        terminated_program = executor.execute()
+        if terminated_program[0] == 19690720:
+            print("Found noun verb combination:", noun, "/", verb)
+            break
+
