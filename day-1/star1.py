@@ -6,7 +6,7 @@ with open("input.txt") as file:
 
 content = [x.strip() for x in content]
 
-total_fuel = 0;
+total_fuel = 0
 
 for line in content:
     mass = int(line)
