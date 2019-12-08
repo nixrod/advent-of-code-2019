@@ -1,20 +1,23 @@
 #!/usr/bin/python3
 from wire_path import Wirepath
+from grid_solver import GridSolver
 
 
-def load_program():
+def solve_cable_routing():
     with open("input.txt") as file:
         content = file.readlines()
 
     content = [x.strip() for x in content]
 
-    program = []
+    path1 = Wirepath()
+    path1.set_wires(content[0].split(","))
 
-    for line in content:
-        items = line.split(",")
-        program += [int(item) for item in items]
+    path2 = Wirepath()
+    path2.set_wires(content[1].split(","))
 
-    return program
+    solver = GridSolver()
+    solution = solver.solve_grid(path1, path2)
+    print("Closest intersection has distance of", solution)
 
 
-grid = Wirepath()
+solve_cable_routing()
