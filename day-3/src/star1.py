@@ -15,8 +15,7 @@ def solve_cable_routing():
     path2 = Wirepath()
     path2.set_wires(content[1].split(","))
 
-    solver = GridSolver()
-    solution = solver.solve_grid(path1, path2)
+    solution = GridSolver.find_shortest_manhattan_distance_node(path1, path2)
     print("Closest intersection has distance of", solution)
 
 
