@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from intcode_computer import IntcodeComputer
+from intcode_computer5 import IntcodeComputer
 
 
 def load_program():

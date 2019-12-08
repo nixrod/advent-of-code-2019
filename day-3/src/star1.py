@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from wire_path import Wirepath
 from grid_solver import GridSolver
 
